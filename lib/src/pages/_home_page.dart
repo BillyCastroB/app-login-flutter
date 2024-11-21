@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_app/src/config/create.dart';
+import 'package:hotel_app/src/config/deleteReserva.dart';
 import 'package:hotel_app/src/config/getReservas.dart';
 
 class HomePage extends StatefulWidget {
@@ -54,7 +55,9 @@ class _HomePageState extends State<HomePage> {
                 },
                 icon: Icon(Icons.read_more_sharp, color: Colors.grey,),
                 label: Text('Ver Habitaciones')),
-                ElevatedButton.icon(onPressed: (){},
+                ElevatedButton.icon(onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => DeleteReserva()));
+                },
                 icon: Icon(Icons.delete, color: Colors.redAccent,),
                 label: Text('Eliminar Habitación')),
                 ElevatedButton.icon(onPressed: (){},

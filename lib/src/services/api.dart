@@ -87,4 +87,12 @@ class Api {
   }
 }
 
+  static Future<bool> eliminarReserva(String id) async {
+    final response = await http.delete(Uri.parse('$baseUrl/reserva/huesped/completa/$id'));
+    if (response.statusCode == 200) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
