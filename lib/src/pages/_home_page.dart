@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_app/src/config/create.dart';
+import 'package:hotel_app/src/config/getReservas.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -48,7 +49,9 @@ class _HomePageState extends State<HomePage> {
                 },
                 icon: Icon(Icons.create_sharp, color: Colors.blueAccent,),
                 label: Text('Crear Habitación')),
-                ElevatedButton.icon(onPressed: (){},
+                ElevatedButton.icon(onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => GetReservas()));
+                },
                 icon: Icon(Icons.read_more_sharp, color: Colors.grey,),
                 label: Text('Ver Habitaciones')),
                 ElevatedButton.icon(onPressed: (){},
