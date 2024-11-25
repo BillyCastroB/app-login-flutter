@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hotel_app/src/config/create.dart';
 import 'package:hotel_app/src/config/deleteReserva.dart';
 import 'package:hotel_app/src/config/getReservas.dart';
+import 'package:hotel_app/src/pages/login_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -63,7 +64,9 @@ class _HomePageState extends State<HomePage> {
                 ElevatedButton.icon(onPressed: (){},
                 icon: Icon(Icons.restart_alt_rounded, color: Colors.amberAccent,),
                 label: Text('Editar Habitación')),
-                ElevatedButton.icon(onPressed: (){},
+                ElevatedButton.icon(onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => LoginPage()));
+                },
                 icon: Icon(Icons.close_outlined, color: Colors.black54,),
                 label: Text('Salir')),
               ],
